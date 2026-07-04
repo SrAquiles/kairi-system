@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/send-reminder?session=morning",
+      "schedule": "0 11 * * *"
+    },
+    {
+      "path": "/api/send-reminder?session=afternoon",
+      "schedule": "0 22 * * *"
+    },
+    {
+      "path": "/api/send-reminder?session=night",
+      "schedule": "0 4 * * *"
+    }
+  ]
+}
